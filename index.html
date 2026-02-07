@@ -9,14 +9,14 @@
 <body>
     <div class="container">
         <h1 id="to-do-app" class="todo">To-Do App</h1>
-        <input type="text" id="taskInput" name="task" placeholder="Enter a task here..." size="30" required>
-        <button type="button" class="btn">Add Task</button>
-        <ol class="taskList">
-            <li>Job on Google</li>
-            <li>Job on Apple</li>
-            <li>Job on Microsoft</li>
-            <li>Job on Amazon</li>
-            <li>Job on Meta</li>
+        <div class="input-container">
+            <input type="text" id="taskInput" placeholder="Add a task..." />
+            <button id="addTaskBtn">Add Task</button>
+        </div>
+        <ol id="taskList">
+          <li><span class="task-number">1.</span><span class="task-text">Web Developer</span></li>
+          <li><span class="task-number">2.</span><span class="task-text">Software Engineer</span></li>
+          <li><span class="task-number">3.</span><span class="task-text">Data Analyst</span></li>
         </ol>
     </div>
 </body>

@@ -1,84 +1,76 @@
 body {
-background-color: lightblue;
-text-align: center;
-width: 500px;
-margin: 20px auto;
-
-}
-@font-face {
-font-family: 'mycustomfont';
-src: url("fonts/Montserrat-Italic-VariableFont_wght.truetype") format("truetype");
-font-weight: 700;
-font-style: italic;
-}
-@font-face {
-    font-family: 'mycustomfont';
-    src: url("fonts/Montserrat-Italic-VariableFont_wght.truetype") format("truetype");
-    font-weight: 400;
-    font-style: normal;
-}
-h1 {
-    font-family: 'mycustomfont', !important;
-    font-weight: 700;
-    font-style: italic;
-}
-.container {
-    background-color: lightcyan;
-    width: 70%;
-    border-radius: 10px;
-    border: 2px solid darkcyan;
-    padding: 0 auto;
-}
-
-button {
-    margin-bottom: 10px;
-    background-color: lightcyan;
-    border-radius: 4px;
-    border: 1px solid darkcyan;
-    display: inline-block;
-    color: black;
-    font-style: italic;
-}
-ol li {
-    min-height: 30px;
-}
-input::placeholder {
-    color: black;
-    
-    
-    font-style: italic;
-}
-li {
-    font-family: 'mycustomfont', sans-serif;
-    font-weight:400;
-    font-style: italic;
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    text-indent: 0;
+    background-color: #f5f5f5;
 }
-input {
-    padding: 5px;
-    border: 2px solid darkcyan;
-    background-color: lightcyan;
+.container {
+    max-width: 600px;
+    margin: 20px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+}
+.input-container {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+#taskInput {
+    flex: 1;
+    padding: 10px;
+    font-size: 16px;
     border-radius: 5px;
+    border: 1px solid #ccc;
 }
-ol {
+#addTaskBtn {
+    padding: 10px 15px;
+    font-size: 16px;
+    border: none;
+    background: #4caf50;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+#taskList {
     list-style: none;
-    padding: 0 auto;
-    margin: 0;
-    counter-reset: todo;
+    padding-left: 0;
 }
-li {
-    display: grid;
-    grid-template-columns: 2ch auto;
-    gap: 0.5em;
-counter-increment: todo;
-margin: 0.5em 0;
-
+#taskList li {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 10px;
+}
+.task-number {
+    width: 25px;
+    text-align: right;
+    color: #333;
 
 }
-li::before {
-    content: counter(todo) ".";
-text-align: right;
+.task-text {
+    flex: 1;
+    word-break: break-word;
 }
+@media screen and (max-width: 480px) {
+    .container {
+        padding: 15px;
+    }
+    #taskInput {
+        font-size: 14px;
+        padding: 8px;
 
+    }
+    #addTaskBtn {
+        font-size: 14px;
+        padding: 8px 12px;
+    }
+    .task-number {
+        width: 20px;
+    }
+    .task-text {
+        font-size: 14px;
+    }
+}
