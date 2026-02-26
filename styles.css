@@ -34,10 +34,11 @@ body {
   border-radius: 5px;
   cursor: pointer;
 }
-#display {
+#to-do-list {
   display: block;
   padding: 20px auto;
   margin: 20px auto 40px;
+  cursor: pointer;
 }
 #taskList {
   list-style: none;
